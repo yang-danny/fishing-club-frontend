@@ -67,6 +67,7 @@ type CollectionType = {
     publisher:string;
     media: [string];
     body: string;
+    createdAt: Date;
   };
   type EventType = {
     _id: string;
@@ -77,5 +78,5 @@ type CollectionType = {
     funder:string;
     media: [string];
     body: string;
-   
+    createdAt: Date; 
   };
