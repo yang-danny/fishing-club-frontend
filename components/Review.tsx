@@ -38,7 +38,7 @@ const Review = ({
   productId,
   orderId,
 }: {
-  productReviews: ReviewType;
+  productReviews: ReviewType[];
   customerId: string;
   productId: string;
   orderId: string;
