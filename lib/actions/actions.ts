@@ -29,7 +29,12 @@ export const getPublishNews = async () => {
   }
   
   export const getProductDetails = async (productId: string) => {
-    const product = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products/${productId}`
+    const product = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products/${productId}`,
+       {
+        mode: 'no-cors',
+        credentials: 'include',
+        method: 'GET',
+      }
     )
     return await product.json()
   }
