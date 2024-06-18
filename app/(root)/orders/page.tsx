@@ -60,7 +60,7 @@ const Orders = async () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-4 gap-8 max-md:grid-cols-2 max-md:gap-2">
+            <div className="grid grid-cols-3 gap-8 max-md:grid-cols-2 max-md:gap-2">
               {order.products.map((orderItem: OrderItemType) => (
                 <div
                 key={orderItem.product._id}
