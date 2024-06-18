@@ -61,8 +61,8 @@ const Cart = () => {
   return (
     <div className="relative w-full h-[1000px] bg-cover bg-center bg-[url('https://res.cloudinary.com/dioas9lmz/image/upload/v1716098657/MarineStripedMarlinAnimalBackgroundFishingPhotographyBackdropIBD-20099_wsgf2j.jpg')]">
 
-    <div className="flex gap-20 py-40 px-60 max-lg:flex-col max-sm:px-3">
-      <div className="w-1/2 max-lg:w-full">
+    <div className="absolute px-56 justify-center items-center gap-10 py-40 max-sm:px-5">
+      <div className="w-full ">
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
@@ -102,7 +102,7 @@ const Cart = () => {
                   <tr
                     key={index}
                     className="w-full grid grid-cols-3 p-2 rounded-md items-center mb-4 text-sky-900 bg-white dark:bg-sky-900 dark:text-sky-300">
-                    <td className="flex flex-col justify-center items-start">
+                    <td className="flex justify-start items-center">
                       <Image
                         src={cartItem.item.media[0]}
                         width={100}
@@ -172,8 +172,8 @@ const Cart = () => {
         )}
       </div>
 
-      <div className="w-1/2 max-h-52 max-lg:w-full flex flex-col gap-8 bg-sky-300 dark:bg-sky-900 dark:text-sky-300 rounded-lg px-4 py-5 mt-10 text-sky-900">
-        <p className="text-heading4-bold pb-4">
+      <div className="w-1/2 max-h-52 max-lg:w-full flex flex-col gap-4 bg-sky-300 dark:bg-sky-900 dark:text-sky-300 rounded-lg px-4 py-5 mt-4 text-sky-900">
+        <p className="text-heading4-bold pb-2">
           Summary{" "}
           <span>{`(${cart.cartItems.length} ${
             cart.cartItems.length > 1 ? "items" : "item"
@@ -185,9 +185,9 @@ const Cart = () => {
         </div>
         <div className="flex justify-center gap-4">
           <div className=" flex  relative">
-            <DollarSign className="text-green-300 cursor-pointer absolute top-2 left-3 z-10 " />
+            <DollarSign className="text-green-500 cursor-pointer absolute top-2 left-3 z-10 " />
             <button
-              className="border rounded-lg text-body-semibold bg-white py-3 w-44 dark:bg-sky-500 hover:bg-sky-900 hover:text-white"
+              className="border-none rounded-lg text-body-semibold bg-white py-3 w-44 dark:bg-sky-500 hover:bg-sky-500 hover:text-white dark:hover:bg-sky-950"
               onClick={handleCheckout}>
               Checkout
             </button>
@@ -196,7 +196,7 @@ const Cart = () => {
           <div className=" flex  relative">
             <Trash className="text-red-500 cursor-pointer absolute top-2 left-3 z-10 " />
             <button
-              className="border rounded-lg text-body-semibold bg-white py-3 w-44 dark:bg-sky-500 hover:bg-sky-900 hover:text-white"
+              className="border-none rounded-lg text-body-semibold bg-white py-3 w-44 dark:bg-sky-500 hover:bg-sky-500 hover:text-white dark:hover:bg-sky-950"
               onClick={() => cart.clearCart()}>
               Empty Cart
             </button>

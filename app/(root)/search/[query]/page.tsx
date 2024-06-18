@@ -18,32 +18,34 @@ const SearchPage = async ({ params }: { params: { query: string }}) => {
   const decodedQuery = decodeURIComponent(params.query)
 
   return (
-    <div className='px-80 py-5'>
+    <div className="relative w-full h-[1000px] bg-cover bg-center bg-[url('https://res.cloudinary.com/dioas9lmz/image/upload/v1716098657/MarineStripedMarlinAnimalBackgroundFishingPhotographyBackdropIBD-20099_wsgf2j.jpg')]">
+    <div className='px-60 py-40'>
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
               <BreadcrumbLink href="/">
-                <Home />
+                <Home className="text-white dark:text-sky-300"/>
               </BreadcrumbLink>
             </BreadcrumbItem>
-            <BreadcrumbSeparator />
+            <BreadcrumbSeparator className="text-white dark:text-sky-300"/>
             <BreadcrumbItem>
               <BreadcrumbLink href="/search">
-                <Search />
+                <Search className="text-white dark:text-sky-300"/>
               </BreadcrumbLink>
             </BreadcrumbItem>
-            <BreadcrumbSeparator />
+            <BreadcrumbSeparator className="text-white dark:text-sky-300"/>
           </BreadcrumbList>
         </Breadcrumb>
-      <p className='text-heading3-bold my-10 text-sky-900 dark:text-sky-300'>Search results for key word: {decodedQuery}</p>
+      <p className='text-heading3-bold my-10 text-white dark:text-sky-300'>Search results for key word: {decodedQuery}</p>
       {!searchedProducts || searchedProducts.length === 0 && (
         <p className='text-body-bold my-5'>No result found</p>
       )}
-      <div className='flex flex-wrap justify-center gap-16'>
+      <div className='flex flex-wrap justify-start gap-8'>
         {searchedProducts?.map((product: ProductType) => (
           <ProductCard key={product._id} product={product} />
         ))}
       </div>
+    </div>
     </div>
   )
 }
