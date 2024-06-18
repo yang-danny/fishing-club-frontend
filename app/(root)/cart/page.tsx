@@ -102,7 +102,7 @@ const Cart = () => {
                   <tr
                     key={index}
                     className="w-full grid grid-cols-3 p-2 rounded-md items-center mb-4 text-sky-900 bg-white dark:bg-sky-900 dark:text-sky-300">
-                    <td className="flex">
+                    <td className="flex flex-col justify-center items-start">
                       <Image
                         src={cartItem.item.media[0]}
                         width={100}
