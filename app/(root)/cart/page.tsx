@@ -79,7 +79,7 @@ const Cart = () => {
             <BreadcrumbSeparator className="text-white dark:text-sky-300"/>
           </BreadcrumbList>
         </Breadcrumb>
-        <hr className="my-6 border-sky-300" />
+        <hr className="my-6 border-white dark:border-sky-300" />
 
         {cart.cartItems.length === 0 ? (
           <div className=" text-sky-900">
@@ -90,13 +90,13 @@ const Cart = () => {
           <div>
             <table className="w-full  items-center text-sky-300">
               <thead>
-                <tr className="text-lg w-full grid grid-cols-3 items-center">
+                <tr className="text-lg text-white dark:text-sky-300 w-full grid grid-cols-3 items-center">
                   <th>Item</th>
                   <th>Quantity</th>
                   <th>Price</th>
                 </tr>
               </thead>
-              <hr className="my-6 border-sky-300" />
+              <hr className="my-6 border-white dark:border-sky-300" />
               <tbody className="w-full ">
                 {cart.cartItems.map((cartItem, index) => (
                   <tr
@@ -172,7 +172,7 @@ const Cart = () => {
         )}
       </div>
 
-      <div className="w-1/4 max-h-52 max-lg:w-full flex flex-col gap-8 bg-sky-300 dark:bg-sky-900 dark:text-sky-300 rounded-lg px-4 py-5 mt-10 text-sky-900">
+      <div className="w-1/3 max-h-52 max-lg:w-full flex flex-col gap-8 bg-sky-300 dark:bg-sky-900 dark:text-sky-300 rounded-lg px-4 py-5 mt-10 text-sky-900">
         <p className="text-heading4-bold pb-4">
           Summary{" "}
           <span>{`(${cart.cartItems.length} ${
