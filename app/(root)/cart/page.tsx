@@ -62,7 +62,7 @@ const Cart = () => {
     <div className="relative w-full h-[1000px] bg-cover bg-center bg-[url('https://res.cloudinary.com/dioas9lmz/image/upload/v1716098657/MarineStripedMarlinAnimalBackgroundFishingPhotographyBackdropIBD-20099_wsgf2j.jpg')]">
 
     <div className="flex gap-20 py-40 px-60 max-lg:flex-col max-sm:px-3">
-      <div className="w-2/3 max-lg:w-full">
+      <div className="w-1/2 max-lg:w-full">
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
@@ -172,7 +172,7 @@ const Cart = () => {
         )}
       </div>
 
-      <div className="w-1/3 max-h-52 max-lg:w-full flex flex-col gap-8 bg-sky-300 dark:bg-sky-900 dark:text-sky-300 rounded-lg px-4 py-5 mt-10 text-sky-900">
+      <div className="w-1/2 max-h-52 max-lg:w-full flex flex-col gap-8 bg-sky-300 dark:bg-sky-900 dark:text-sky-300 rounded-lg px-4 py-5 mt-10 text-sky-900">
         <p className="text-heading4-bold pb-4">
           Summary{" "}
           <span>{`(${cart.cartItems.length} ${
