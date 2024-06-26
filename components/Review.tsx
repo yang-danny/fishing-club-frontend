@@ -88,17 +88,17 @@ const Review = ({
     }
   };
   return (
-    <div className="flex flex-col justify-center items-start gap-8 px-96 py-1 max-md:px-10">
-      <p className="text-heading3-bold text-sky-900">Reviews:</p>
+    <div className="flex flex-col justify-center items-start gap-8 px-24 py-1 max-md:px-10">
+      <p className="text-heading3-bold text-sky-900 dark:text-sky-300">Reviews:</p>
       {orderId && (
         <>
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
               className="flex gap-4 flex-col w-full">
-              <p className="font-bold">Write a review:</p>
+              <p className="font-bold text-sky-900 dark:text-sky-300">Write a review:</p>
               <div className="flex flex-col">
-                <p className="font-bold mb-2">Click for Rating</p>
+                <p className="font-bold mb-2 text-sky-900 dark:text-sky-300">Click for Rating</p>
                 <Stars callback={handleCallback} />
               </div>
               <FormField
@@ -106,7 +106,7 @@ const Review = ({
                 name="title"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="font-bold">Add a title</FormLabel>
+                    <FormLabel className="font-bold text-sky-900 dark:text-sky-300">Add a title</FormLabel>
                     <FormControl>
                       <Input
                         placeholder="What is the most important to know?"
@@ -124,7 +124,7 @@ const Review = ({
                 name="body"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="font-bold">
+                    <FormLabel className="font-bold text-sky-900 dark:text-sky-300">
                       Add a written review
                     </FormLabel>
                     <FormControl>
@@ -144,7 +144,7 @@ const Review = ({
                 name="media"
                 render={({ field }) => (
                   <FormItem className="flex flex-col">
-                    <FormLabel className="font-bold">Add a photo</FormLabel>
+                    <FormLabel className="font-bold text-sky-900 dark:text-sky-300">Add a photo</FormLabel>
                     <p className="text-gray-400">
                       Shoppers find images and videos more helpful than text
                       alone.
@@ -179,18 +179,18 @@ const Review = ({
               <AvatarImage src="https://github.com/shadcn.png" />
               <AvatarFallback>{review.customer.name}</AvatarFallback>
             </Avatar>
-            <p className="font-bold">{review.customer.name}</p>
+            <p className="font-bold text-sky-900 dark:text-sky-300">{review.customer.name}</p>
           </div>
           <div className="my-2">
             <Rating value={review.rating} caption={" "} />
-            <p className="font-bold text-heading4-bold my-2">{review.title}</p>
-            <p className="text-gray-400 my-2">
+            <p className="font-bold text-heading4-bold my-2 text-sky-900 dark:text-sky-300">{review.title}</p>
+            <p className="text-gray-400 my-2 text-sky-900 dark:text-sky-300">
               Reviewed on{" "}
-              <span className="font-bold">
+              <span className="font-bold text-sky-900 dark:text-sky-300">
                 {new Date(review.createdAt).toDateString()}
               </span>
             </p>
-            <p className="my-2">{review.body}</p>
+            <p className="my-2 text-sky-900 dark:text-sky-300">{review.body}</p>
             {review.media[0] ? (
               <Image
                 src={review.media[0]}
